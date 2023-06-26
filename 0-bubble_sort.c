@@ -2,8 +2,8 @@
 
 /**
  * bubble_sort - a function that sorts an array using bubble sort algorithm
- * @array - the array to be sorted
- * @size - the size of the array
+ * @array: the array to be sorted
+ * @size: the size of the array
  */
 void bubble_sort(int *array, size_t size)
 {
@@ -28,5 +28,5 @@ void bubble_sort(int *array, size_t size)
 		}
 		if (no_of_swap == 0)
 			return;
-	}	
+	}
 }
