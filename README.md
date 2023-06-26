@@ -7,6 +7,7 @@ The following are mandatory task
 	- You’re expected to print the array after each time you swap two elements (See example below)
 
 Write in the file 0-O, the big O notations of the time complexity of the Bubble sort algorithm, with 1 notation per line:
+
 	- in the best case
 	- in the average case
 	- in the worst case
@@ -17,6 +18,7 @@ Write in the file 0-O, the big O notations of the time complexity of the Bubble 
 	- You’re expected to print the list after each time you swap two elements (See example below)
 
 Write in the file 1-O, the big O notations of the time complexity of the Insertion sort algorithm, with 1 notation per line:
+
 	- in the best case
 	- in the average case
 	- in the worst case
@@ -26,6 +28,7 @@ Write in the file 1-O, the big O notations of the time complexity of the Inserti
 	- You’re expected to print the array after each time you swap two elements (See example below)
 
 Write in the file 2-O, the big O notations of the time complexity of the Selection sort algorithm, with 1 notation per line:
+
 	- in the best case
 	- in the average case
 	- in the worst case
@@ -37,6 +40,7 @@ Write in the file 2-O, the big O notations of the time complexity of the Selecti
 	- You’re expected to print the array after each time you swap two elements (See example below)
 
 Write in the file 3-O, the big O notations of the time complexity of the Quick sort algorithm, with 1 notation per line:
+
 	- in the best case
 	- in the average case
 	- in the worst case
