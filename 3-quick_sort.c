@@ -3,20 +3,20 @@
 /**
  * partition - finds the partition for the quicksort using the Lomuto scheme
  * @array: array to sort
- * @lo: lowest index of the partition to sort
- * @hi: highest index of the partition to sort
+ * @low: lowest index of the partition to sort
+ * @high: highest index of the partition to sort
  * @size: size of the array
  *
  * Return: index of the partition
  */
-size_t partition(int *array, ssize_t lo, ssize_t hi, size_t size)
+size_t partition(int *array, ssize_t low, ssize_t high, size_t size)
 {
 	ssize_t i, j;
 	int swap, pivot;
 
-	pivot = array[hi];
-	i = lo - 1;
-	for (j = lo; j < hi; j++)
+	pivot = array[high];
+	i = low - 1;
+	for (j = low; j < high; j++)
 	{
 		if (array[j] < pivot)
 		{
@@ -30,41 +30,41 @@ size_t partition(int *array, ssize_t lo, ssize_t hi, size_t size)
 			}
 		}
 	}
-	if (array[hi] < array[i + 1])
+	if (array[high] < array[i + 1])
 	{
 		swap = array[i + 1];
-		array[i + 1] = array[hi];
-		array[hi] = swap;
+		array[i + 1] = array[high];
+		array[high] = swap;
 		print_array(array, size);
 	}
 	return (i + 1);
 }
 
 /**
- * quicksort - sorts a partition of an array of integers
+ * recursion - sorts a partition of an array of integers
  * @array: array to sort
- * @lo: lowest index of the partition to sort
- * @hi: highest index of the partition to sort
+ * @low: lowest index of the partition to sort
+ * @high: highest index of the partition to sort
  * @size: size of the array
  *
  * Return: void
  */
-void quicksort(int *array, ssize_t lo, ssize_t hi, size_t size)
+void recursion(int *array, ssize_t low, ssize_t high, size_t size)
 {
 	ssize_t pivot;
 
-	if (lo < hi)
+	if (low < high)
 	{
-		pivot = partition(array, lo, hi, size);
-		quicksort(array, lo, pivot - 1, size);
-		quicksort(array, pivot + 1, hi, size);
+		pivot = partition(array, low, high, size);
+		recursion(array, low, pivot - 1, size);
+		recursion(array, pivot + 1, high, size);
 
 	}
 }
 
 /**
  * quick_sort - sorts an array of integers in ascending order using the
- * Quick sort algorithm
+ * quick sort algorithm
  * @array: The array to sort
  * @size: The size of the array
  *
@@ -74,5 +74,5 @@ void quick_sort(int *array, size_t size)
 {
 	if (array == NULL || size < 2)
 		return;
-	quicksort(array, 0, size - 1, size);
+	recursion(array, 0, size - 1, size);
 }
